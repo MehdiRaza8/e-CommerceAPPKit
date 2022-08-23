@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:styleapp/Screen/botomnav.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -79,7 +80,10 @@ class LoginPage extends StatelessWidget {
                         ]),
                     child: Center(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const BotomnavBar()));
+                        },
                         child: Text(
                           'Login',
                           style: TextStyle(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:styleapp/Screen/loginpage/login.dart';
 
 class GirlsTow extends StatelessWidget {
   const GirlsTow({Key? key}) : super(key: key);
@@ -37,7 +38,10 @@ class GirlsTow extends StatelessWidget {
                       ),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const LoginPage()));
+                  },
                   child: Text(
                     "Continue with instagram",
                     style: TextStyle(
