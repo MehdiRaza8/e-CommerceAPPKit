@@ -27,15 +27,17 @@ class _BotomnavBarState extends State<BotomnavBar>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TabBarView(
-          controller: _tabController,
-          physics: const NeverScrollableScrollPhysics(),
-          children: const [
-            TopTabBar(),
-            Center(child: Text('Haider')),
-            Center(child: Text('Haider')),
-            Center(child: Text('Haider')),
-          ]),
+      body: SafeArea(
+        child: TabBarView(
+            controller: _tabController,
+            physics: const NeverScrollableScrollPhysics(),
+            children: const [
+              TopTabBar(),
+              Center(child: Text('Haider')),
+              Center(child: Text('Haider')),
+              Center(child: Text('Haider')),
+            ]),
+      ),
       bottomNavigationBar: Container(
         color: const Color(0xffFFFFFF),
         child: TabBar(

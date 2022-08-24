@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:styleapp/Screen/botomnav.dart';
-import 'package:styleapp/Screen/boyone.dart';
-import 'package:styleapp/Screen/girlstow.dart';
-import 'package:styleapp/Screen/home.dart';
-import 'package:styleapp/Screen/loginpage/login.dart';
 import 'package:styleapp/Screen/splash.dart';
 
 void main() {

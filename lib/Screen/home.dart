@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:styleapp/Colors/colors.dart';
 import 'package:styleapp/Screen/boyone.dart';
 import 'package:styleapp/Screen/boytow.dart';
 import 'package:styleapp/Screen/girls.dart';
@@ -20,33 +18,35 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-      children: [
-        PageView(
-          controller: _controller,
-          children: [
-            BoyOne(),
-            Boytow(),
-            girlsOne(),
-            GirlsTow(),
-          ],
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 20),
-          child: Container(
-            alignment: Alignment.bottomCenter,
-            child: SmoothPageIndicator(
-              controller: _controller,
-              count: 4,
-              effect: ExpandingDotsEffect(
-                  radius: 10,
-                  dotWidth: 10,
-                  dotHeight: 10,
-                  activeDotColor: Color(0xff3009CD)),
+        body: SafeArea(
+          child: Stack(
+              children: [
+          PageView(
+            controller: _controller,
+            children: [
+              BoyOne(),
+              Boytow(),
+              girlsOne(),
+              GirlsTow(),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: Container(
+              alignment: Alignment.bottomCenter,
+              child: SmoothPageIndicator(
+                controller: _controller,
+                count: 4,
+                effect: ExpandingDotsEffect(
+                    radius: 10,
+                    dotWidth: 10,
+                    dotHeight: 10,
+                    activeDotColor: Color(0xff3009CD)),
+              ),
             ),
           ),
-        ),
-      ],
-    ));
+              ],
+            ),
+        ));
   }
 }
